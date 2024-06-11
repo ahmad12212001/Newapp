@@ -131,7 +131,8 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
 
-st.markdown('</div>', unsafe_allow_html=True)
+st.markdown('</div>', unsafe_allow_html
+=True)
 
 if prompt := st.chat_input():
     st.session_state.messages.append({"role": "user", "content": prompt})
